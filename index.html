@@ -13,88 +13,37 @@
 
     body, html {
       height: 100%;
+      background-color: #000;
       font-family: 'Segoe UI', sans-serif;
-      background: #0d0d0d;
       overflow: hidden;
-      color: #00ffff;
     }
 
     .background {
       position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
       height: 100%;
-      overflow: hidden;
       z-index: -1;
     }
 
-    .circles {
+    .particle {
       position: absolute;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-    }
-
-    .circles div {
-      position: absolute;
-      display: block;
-      width: 40px;
-      height: 40px;
-      background: rgba(0, 255, 255, 0.2);
-      animation: animate 25s linear infinite;
-      bottom: -150px;
       border-radius: 50%;
+      background: #00ffff;
+      width: 15px;
+      height: 15px;
+      opacity: 0.6;
+      filter: blur(3px);
+      animation: floatUp linear infinite;
     }
 
-    .circles div:nth-child(1) {
-      left: 25%;
-      width: 80px;
-      height: 80px;
-      animation-delay: 0s;
-    }
-
-    .circles div:nth-child(2) {
-      left: 10%;
-      animation-delay: 2s;
-      animation-duration: 12s;
-    }
-
-    .circles div:nth-child(3) {
-      left: 70%;
-      width: 100px;
-      height: 100px;
-      animation-delay: 4s;
-    }
-
-    .circles div:nth-child(4) {
-      left: 40%;
-      animation-delay: 0s;
-      animation-duration: 18s;
-    }
-
-    .circles div:nth-child(5) {
-      left: 65%;
-      animation-delay: 0s;
-    }
-
-    .circles div:nth-child(6) {
-      left: 75%;
-      width: 110px;
-      height: 110px;
-      animation-delay: 3s;
-    }
-
-    @keyframes animate {
+    @keyframes floatUp {
       0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-        border-radius: 0;
+        transform: translateY(0) scale(1);
+        opacity: 0.6;
       }
       100% {
-        transform: translateY(-1000px) rotate(720deg);
+        transform: translateY(-1000px) scale(1.5);
         opacity: 0;
-        border-radius: 50%;
       }
     }
 
@@ -106,20 +55,85 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      color: #00ffff;
       text-align: center;
       padding: 20px;
     }
 
-    h1 {
-      font-size: 48px;
+    h1.glitch {
+      font-size: 50px;
       margin-bottom: 20px;
-      color: #00ffff;
+      position: relative;
+      animation: glitch 1s infinite;
     }
 
-    p {
+    h1.glitch::before,
+    h1.glitch::after {
+      content: attr(data-text);
+      position: absolute;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    h1.glitch::before {
+      top: -2px;
+      color: #ff00ff;
+      z-index: -1;
+      animation: glitchTop 1s infinite;
+    }
+
+    h1.glitch::after {
+      top: 2px;
+      color: #00ffff;
+      z-index: -1;
+      animation: glitchBottom 1s infinite;
+    }
+
+    @keyframes glitch {
+      0% { transform: none; }
+      20% { transform: skew(-5deg); }
+      40% { transform: skew(5deg); }
+      60% { transform: none; }
+      80% { transform: skew(-3deg); }
+      100% { transform: none; }
+    }
+
+    @keyframes glitchTop {
+      0% { transform: translate(0); }
+      20% { transform: translate(-2px, -2px); }
+      40% { transform: translate(2px, -2px); }
+      60% { transform: translate(0); }
+      80% { transform: translate(2px, -1px); }
+      100% { transform: translate(0); }
+    }
+
+    @keyframes glitchBottom {
+      0% { transform: translate(0); }
+      20% { transform: translate(2px, 2px); }
+      40% { transform: translate(-2px, 2px); }
+      60% { transform: translate(0); }
+      80% { transform: translate(-2px, 1px); }
+      100% { transform: translate(0); }
+    }
+
+    .typing {
+      color: #cccccc;
       font-size: 20px;
       max-width: 700px;
-      color: #cccccc;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid #00ffff;
+      animation: typing 4s steps(60, end), blink 0.7s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
     }
 
     footer {
@@ -133,15 +147,25 @@
   </style>
 </head>
 <body>
-  <div class="background">
-    <div class="circles">
-      <div></div><div></div><div></div><div></div><div></div><div></div>
-    </div>
-  </div>
+  <div class="background" id="background"></div>
+
   <div class="content">
-    <h1>Welcome to AI Tech World</h1>
-    <p>Explore the future of technology and artificial intelligence. Immerse yourself in the innovation shaping tomorrow's world.</p>
+    <h1 class="glitch" data-text="Welcome to AI Tech World">Welcome to AI Tech World</h1>
+    <p class="typing">Exploring the future of artificial intelligence, one pixel at a time...</p>
   </div>
+
   <footer>&copy; 2025 AI Tech World</footer>
+
+  <script>
+    const background = document.getElementById('background');
+    for (let i = 0; i < 50; i++) {
+      const particle = document.createElement('div');
+      particle.classList.add('particle');
+      particle.style.left = Math.random() * 100 + "vw";
+      particle.style.bottom = "-" + Math.random() * 100 + "px";
+      particle.style.animationDuration = 5 + Math.random() * 10 + "s";
+      background.appendChild(particle);
+    }
+  </script>
 </body>
 </html>
