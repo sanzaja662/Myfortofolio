@@ -3,37 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AI Tech World</title>
+  <title>Dunia AI & Teknologi</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      background: linear-gradient(to bottom, #000000, #0a0a0a);
-      color: #00ffee;
-      font-family: 'Segoe UI', sans-serif;
-      line-height: 1.6;
-      overflow-x: hidden;
+      background-color: #0d0d0d;
+      color: #00ffff;
+      font-family: 'Courier New', monospace;
+      padding: 20px;
+      margin: 0;
     }
 
-    .container {
-      padding: 30px 20px;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    #typing-text {
-      font-size: 2.5em;
-      text-align: center;
-      margin-bottom: 30px;
+    h1 {
+      font-size: 26px;
       white-space: nowrap;
       overflow: hidden;
-      border-right: 3px solid #00ffee;
+      border-right: 2px solid #00ffff;
+      animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
       width: 0;
-      animation: typing 3s steps(30, end) forwards, blink 0.75s step-end infinite;
     }
 
     @keyframes typing {
@@ -42,109 +28,100 @@
     }
 
     @keyframes blink {
-      0%, 100% { border-color: transparent; }
-      50% { border-color: #00ffee; }
+      50% { border-color: transparent }
     }
 
-    section {
-      margin-bottom: 40px;
-      animation: fadeIn 1s ease forwards;
-      opacity: 0;
-    }
-
-    section:nth-of-type(n) { animation-delay: 0.2s; }
-
-    h2 {
-      color: #00e0ff;
-      font-size: 1.4em;
-      margin-bottom: 10px;
-      border-left: 4px solid #00ffee;
-      padding-left: 10px;
-    }
-
-    p {
-      margin-bottom: 15px;
-      text-align: justify;
+    .text-section {
+      margin-top: 20px;
+      font-size: 16px;
+      line-height: 1.7;
+      min-height: 50px;
+      white-space: pre-wrap;
+      overflow: hidden;
+      border-right: 2px solid #00ffff;
     }
 
     footer {
+      margin-top: 40px;
       text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-      color: #777;
-    }
-
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-        transform: none;
-      }
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-    }
-
-    @media (max-width: 480px) {
-      #typing-text {
-        font-size: 2em;
-      }
-
-      h2 {
-        font-size: 1.2em;
-      }
-
-      p {
-        font-size: 0.95em;
-      }
+      font-size: 13px;
+      color: #888;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1 id="typing-text">AI Tech World</h1>
 
-    <section>
-      <h2>Apa itu AI?</h2>
-      <p>Artificial Intelligence (AI) adalah bidang dalam ilmu komputer yang berfokus pada penciptaan sistem yang mampu melakukan tugas yang biasanya memerlukan kecerdasan manusia. Ini mencakup hal-hal seperti berpikir logis, belajar dari pengalaman, mengenali suara dan gambar, serta membuat keputusan.</p>
-    </section>
+  <h1 id="judul">Mengenal Dunia AI & Teknologi</h1>
 
-    <section>
-      <h2>Sejarah Singkat AI</h2>
-      <p>AI dimulai pada tahun 1956 saat para ilmuwan komputer mengadakan konferensi Dartmouth. Sejak saat itu, AI berkembang dari teori ke penerapan nyata di berbagai industri. Perkembangan besar terjadi saat teknologi machine learning dan deep learning mulai digunakan secara luas pada tahun 2010-an.</p>
-    </section>
+  <div class="text-section" id="section1"></div>
+  <div class="text-section" id="section2"></div>
+  <div class="text-section" id="section3"></div>
+  <div class="text-section" id="section4"></div>
+  <div class="text-section" id="section5"></div>
+  <div class="text-section" id="section6"></div>
 
-    <section>
-      <h2>Jenis-Jenis AI</h2>
-      <p><strong>Narrow AI:</strong> AI yang hanya bisa mengerjakan satu tugas spesifik, seperti Google Assistant.</p>
-      <p><strong>General AI:</strong> AI yang mampu melakukan berbagai jenis tugas seperti manusia, masih dalam riset.</p>
-      <p><strong>Super AI:</strong> AI yang jauh lebih cerdas dari manusia, bersifat teoritis dan kontroversial.</p>
-    </section>
+  <footer>&copy; 2025 Dunia AI</footer>
 
-    <section>
-      <h2>Potensi dan Manfaat AI</h2>
-      <p>AI bisa mempercepat pekerjaan manusia. Di bidang kesehatan, AI mampu membantu mendiagnosis penyakit lebih cepat dan akurat. Di bidang keuangan, AI bisa menganalisis data dalam hitungan detik. Di sektor transportasi, mobil otonom mulai berkembang.</p>
-    </section>
+  <script>
+    const texts = [
+      `Apa Itu Kecerdasan Buatan (AI)?
+Kecerdasan Buatan (Artificial Intelligence / AI) adalah cabang ilmu komputer yang berfokus pada pembuatan mesin atau program yang dapat meniru kecerdasan manusia. Ini termasuk kemampuan untuk belajar (machine learning), memahami bahasa (natural language processing), mengenali pola, dan mengambil keputusan secara mandiri.`,
 
-    <section>
-      <h2>AI dalam Kehidupan Sehari-hari</h2>
-      <p>Tanpa disadari, kita sering berinteraksi dengan AI. Saat menonton video YouTube yang direkomendasikan, itu adalah hasil kerja AI. Saat mengetik di Google dan muncul prediksi kata, itu juga kerja AI. Bahkan kamera smartphone yang bisa mendeteksi wajah atau mengatur pencahayaan juga menggunakan teknologi AI.</p>
-      <p>AI juga digunakan dalam aplikasi navigasi seperti Google Maps, chatbot di situs web, sistem keamanan rumah pintar, dan perangkat wearable seperti smartwatch yang memantau kesehatan.</p>
-    </section>
+      `Bagaimana AI Bekerja?
+AI bekerja dengan mengolah data besar (big data) dan menggunakan algoritma untuk menemukan pola tersembunyi, membuat prediksi, atau merespons secara otomatis terhadap situasi tertentu. Salah satu cabang AI yang paling populer saat ini adalah machine learning, di mana sistem belajar dari data tanpa diprogram secara eksplisit.`,
 
-    <section>
-      <h2>Tantangan dan Risiko AI</h2>
-      <p>Meski AI memberi banyak manfaat, ada tantangan yang harus dihadapi. Salah satunya adalah hilangnya pekerjaan karena otomatisasi. Banyak pekerjaan yang dulunya dikerjakan manusia kini bisa dilakukan mesin. Hal ini menimbulkan kekhawatiran akan pengangguran massal.</p>
-      <p>Selain itu, ada risiko etika dan privasi. AI yang digunakan untuk pengawasan bisa disalahgunakan. Deepfake dan manipulasi informasi juga jadi ancaman besar. Oleh karena itu, pengembangan AI harus disertai kebijakan yang adil dan bertanggung jawab.</p>
-    </section>
+      `Contoh Penggunaan AI dalam Kehidupan Sehari-hari:
+- Asisten virtual seperti Siri dan Google Assistant.
+- Rekomendasi film di Netflix atau lagu di Spotify.
+- Fitur deteksi wajah di kamera HP.
+- Sistem navigasi seperti Google Maps.
+- Filter spam di email dan keamanan siber.
+- Chatbot layanan pelanggan yang aktif 24 jam.`,
 
-    <section>
-      <h2>Masa Depan AI dan Manusia</h2>
-      <p>Masa depan AI bukan tentang menggantikan manusia, tapi bagaimana manusia dan AI bisa bekerja sama. AI bisa menjadi asisten yang membantu manusia menjadi lebih produktif. Dunia pendidikan, misalnya, bisa menggunakan AI untuk memberikan pembelajaran yang disesuaikan dengan gaya belajar masing-masing siswa.</p>
-      <p>Dalam jangka panjang, kita mungkin akan hidup berdampingan dengan AI dalam hampir semua aspek kehidupan. Kunci utamanya adalah memastikan bahwa AI digunakan secara etis, transparan, dan tidak merugikan umat manusia.</p>
-    </section>
+      `Potensi AI di Masa Depan:
+AI akan menjadi bagian penting dalam hampir semua bidang:
+- Dalam dunia kesehatan, AI bisa membantu mendiagnosis penyakit lebih cepat dari dokter.
+- Di bidang pertanian, AI bisa memantau kondisi tanaman dan tanah secara real-time.
+- Dalam pendidikan, AI bisa menjadi tutor digital yang personal untuk setiap siswa.
+- Dalam transportasi, kendaraan tanpa pengemudi akan semakin umum.`,
 
-    <footer>&copy; 2025 AI Tech World. Semua hak dilindungi.</footer>
-  </div>
+      `Tantangan dan Risiko AI:
+Meski AI membawa banyak manfaat, ada juga tantangan serius:
+- Hilangnya lapangan kerja karena otomatisasi.
+- Penyalahgunaan AI untuk manipulasi informasi atau pengawasan massal.
+- Bias algoritma yang bisa menghasilkan keputusan yang tidak adil.
+- Kurangnya regulasi dan etika dalam pengembangan AI.`,
+
+      `Kenapa Kamu Harus Peduli?
+Karena AI akan mempengaruhi masa depan kamu — mulai dari cara kamu bekerja, belajar, hingga berinteraksi dengan dunia digital. Dengan memahami cara kerja AI, kamu tidak hanya menjadi pengguna pasif, tapi juga bisa jadi pencipta solusi masa depan. Dunia tidak akan menunggu, dan mereka yang siap dengan AI akan lebih unggul dari yang hanya menonton perubahan terjadi.`
+    ];
+
+    const ids = ["section1", "section2", "section3", "section4", "section5", "section6"];
+
+    function typeText(text, elementId, delay = 25) {
+      let i = 0;
+      const el = document.getElementById(elementId);
+      el.textContent = "";
+      const interval = setInterval(() => {
+        el.textContent += text.charAt(i);
+        i++;
+        if (i >= text.length) clearInterval(interval);
+      }, delay);
+    }
+
+    function startTypingAll() {
+      let totalDelay = 3000; // setelah judul selesai
+
+      texts.forEach((text, index) => {
+        setTimeout(() => {
+          typeText(text, ids[index]);
+        }, totalDelay);
+        totalDelay += text.length * 25 + 1000;
+      });
+    }
+
+    window.onload = startTypingAll;
+  </script>
+
 </body>
 </html>
