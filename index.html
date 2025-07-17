@@ -12,84 +12,139 @@
     }
 
     body {
-      background: radial-gradient(circle at center, #0d0d0d 0%, #000000 100%);
+      background: linear-gradient(to bottom, #000000, #0a0a0a);
       color: #00ffee;
       font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
       overflow-x: hidden;
-      min-height: 100vh;
     }
 
     .container {
-      padding: 40px 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      padding: 30px 20px;
+      max-width: 800px;
+      margin: auto;
     }
 
-    h1 {
+    #typing-text {
       font-size: 2.5em;
-      margin-bottom: 20px;
-      animation: pulse 2s infinite;
       text-align: center;
+      margin-bottom: 30px;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid #00ffee;
+      width: 0;
+      animation: typing 3s steps(30, end) forwards, blink 0.75s step-end infinite;
     }
 
-    .text-box {
-      width: 100%;
-      max-width: 600px;
-      text-align: center;
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
     }
 
-    .text-box p {
-      font-size: 1.1em;
-      margin-bottom: 20px;
+    @keyframes blink {
+      0%, 100% { border-color: transparent; }
+      50% { border-color: #00ffee; }
+    }
+
+    section {
+      margin-bottom: 40px;
+      animation: fadeIn 1s ease forwards;
       opacity: 0;
-      transform: translateY(30px);
-      animation: slideIn 1s forwards;
     }
 
-    .text-box p:nth-child(1) { animation-delay: 0.5s; }
-    .text-box p:nth-child(2) { animation-delay: 1.5s; }
-    .text-box p:nth-child(3) { animation-delay: 2.5s; }
+    section:nth-of-type(n) { animation-delay: 0.2s; }
 
-    @keyframes slideIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    h2 {
+      color: #00e0ff;
+      font-size: 1.4em;
+      margin-bottom: 10px;
+      border-left: 4px solid #00ffee;
+      padding-left: 10px;
     }
 
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); color: #00ffee; }
-      50% { transform: scale(1.05); color: #0fffc3; }
+    p {
+      margin-bottom: 15px;
+      text-align: justify;
     }
 
     footer {
-      margin-top: 40px;
       text-align: center;
+      padding: 20px;
       font-size: 0.9em;
       color: #777;
     }
 
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: none;
+      }
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+    }
+
     @media (max-width: 480px) {
-      h1 {
+      #typing-text {
         font-size: 2em;
       }
 
-      .text-box p {
-        font-size: 1em;
+      h2 {
+        font-size: 1.2em;
+      }
+
+      p {
+        font-size: 0.95em;
       }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>AI Tech World</h1>
-    <div class="text-box">
-      <p>Artificial Intelligence (AI) adalah kecerdasan buatan yang membuat mesin dapat berpikir seperti manusia.</p>
-      <p>AI memungkinkan komputer mengenali suara, gambar, bahkan mengambil keputusan sendiri.</p>
-      <p>Potensi AI sangat besar: dari membantu tugas harian, mendiagnosis penyakit, hingga menciptakan teknologi masa depan.</p>
-    </div>
-    <footer>&copy; 2025 AI Tech World. All rights reserved.</footer>
+    <h1 id="typing-text">AI Tech World</h1>
+
+    <section>
+      <h2>Apa itu AI?</h2>
+      <p>Artificial Intelligence (AI) adalah bidang dalam ilmu komputer yang berfokus pada penciptaan sistem yang mampu melakukan tugas yang biasanya memerlukan kecerdasan manusia. Ini mencakup hal-hal seperti berpikir logis, belajar dari pengalaman, mengenali suara dan gambar, serta membuat keputusan.</p>
+    </section>
+
+    <section>
+      <h2>Sejarah Singkat AI</h2>
+      <p>AI dimulai pada tahun 1956 saat para ilmuwan komputer mengadakan konferensi Dartmouth. Sejak saat itu, AI berkembang dari teori ke penerapan nyata di berbagai industri. Perkembangan besar terjadi saat teknologi machine learning dan deep learning mulai digunakan secara luas pada tahun 2010-an.</p>
+    </section>
+
+    <section>
+      <h2>Jenis-Jenis AI</h2>
+      <p><strong>Narrow AI:</strong> AI yang hanya bisa mengerjakan satu tugas spesifik, seperti Google Assistant.</p>
+      <p><strong>General AI:</strong> AI yang mampu melakukan berbagai jenis tugas seperti manusia, masih dalam riset.</p>
+      <p><strong>Super AI:</strong> AI yang jauh lebih cerdas dari manusia, bersifat teoritis dan kontroversial.</p>
+    </section>
+
+    <section>
+      <h2>Potensi dan Manfaat AI</h2>
+      <p>AI bisa mempercepat pekerjaan manusia. Di bidang kesehatan, AI mampu membantu mendiagnosis penyakit lebih cepat dan akurat. Di bidang keuangan, AI bisa menganalisis data dalam hitungan detik. Di sektor transportasi, mobil otonom mulai berkembang.</p>
+    </section>
+
+    <section>
+      <h2>AI dalam Kehidupan Sehari-hari</h2>
+      <p>Tanpa disadari, kita sering berinteraksi dengan AI. Saat menonton video YouTube yang direkomendasikan, itu adalah hasil kerja AI. Saat mengetik di Google dan muncul prediksi kata, itu juga kerja AI. Bahkan kamera smartphone yang bisa mendeteksi wajah atau mengatur pencahayaan juga menggunakan teknologi AI.</p>
+      <p>AI juga digunakan dalam aplikasi navigasi seperti Google Maps, chatbot di situs web, sistem keamanan rumah pintar, dan perangkat wearable seperti smartwatch yang memantau kesehatan.</p>
+    </section>
+
+    <section>
+      <h2>Tantangan dan Risiko AI</h2>
+      <p>Meski AI memberi banyak manfaat, ada tantangan yang harus dihadapi. Salah satunya adalah hilangnya pekerjaan karena otomatisasi. Banyak pekerjaan yang dulunya dikerjakan manusia kini bisa dilakukan mesin. Hal ini menimbulkan kekhawatiran akan pengangguran massal.</p>
+      <p>Selain itu, ada risiko etika dan privasi. AI yang digunakan untuk pengawasan bisa disalahgunakan. Deepfake dan manipulasi informasi juga jadi ancaman besar. Oleh karena itu, pengembangan AI harus disertai kebijakan yang adil dan bertanggung jawab.</p>
+    </section>
+
+    <section>
+      <h2>Masa Depan AI dan Manusia</h2>
+      <p>Masa depan AI bukan tentang menggantikan manusia, tapi bagaimana manusia dan AI bisa bekerja sama. AI bisa menjadi asisten yang membantu manusia menjadi lebih produktif. Dunia pendidikan, misalnya, bisa menggunakan AI untuk memberikan pembelajaran yang disesuaikan dengan gaya belajar masing-masing siswa.</p>
+      <p>Dalam jangka panjang, kita mungkin akan hidup berdampingan dengan AI dalam hampir semua aspek kehidupan. Kunci utamanya adalah memastikan bahwa AI digunakan secara etis, transparan, dan tidak merugikan umat manusia.</p>
+    </section>
+
+    <footer>&copy; 2025 AI Tech World. Semua hak dilindungi.</footer>
   </div>
 </body>
 </html>
