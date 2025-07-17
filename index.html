@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AI Tech World</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -12,61 +13,87 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
-      background-color: #0d0d0d;
+      font-family: 'Orbitron', sans-serif;
+      background: radial-gradient(ellipse at center, #0f0f0f 0%, #000000 100%);
       color: #00ffff;
+      min-height: 100vh;
       overflow-x: hidden;
+      background-attachment: fixed;
     }
 
     .container {
-      min-height: 100vh;
-      background: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      padding: 40px 20px;
+      text-align: center;
+      padding: 60px 20px;
     }
 
-    h1, h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      color: #00ffff;
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      text-shadow: 0 0 15px #00ffff;
     }
 
     img {
       width: 90%;
       max-width: 800px;
-      border-radius: 20px;
-      box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
-      margin-bottom: 40px;
+      border: 2px solid #00ffff;
+      border-radius: 16px;
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+      margin: 40px 0;
     }
 
     p {
       max-width: 800px;
-      text-align: center;
       font-size: 18px;
-      line-height: 1.7;
-      color: #cccccc;
+      line-height: 1.6;
+      color: #b3ffff;
+      margin-bottom: 40px;
+    }
+
+    .glow {
+      text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
     }
 
     footer {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 14px;
       color: #555;
+      font-size: 14px;
+      margin-top: 60px;
+    }
+
+    /* Background animation */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: repeating-radial-gradient(circle, rgba(0, 255, 255, 0.1), transparent 50px);
+      animation: pulse 4s infinite alternate;
+      z-index: -1;
+    }
+
+    @keyframes pulse {
+      from {
+        opacity: 0.1;
+      }
+      to {
+        opacity: 0.4;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Welcome to the Future</h1>
-    <img src="future-ai.jpg" alt="AI and Technology Poster" />
-    <h2>Explore the Power of AI</h2>
+    <h1 class="glow">AI Tech World</h1>
+    <img src="future-ai.jpg" alt="Futuristic AI Image" />
     <p>
-      Artificial intelligence is revolutionizing our world. From machine learning to neural networks, this is the age of automation and intelligence.
+      Welcome to the world of Artificial Intelligence, where machines learn, adapt, and evolve.
+      Discover how AI and technology are shaping our future in real time.
     </p>
-    <footer>&copy; 2025 AI Tech World</footer>
+    <footer>&copy; 2025 AI Tech World. Powered by innovation.</footer>
   </div>
 </body>
 </html>
