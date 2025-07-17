@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Tech World</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      color: #ccc;
+      background-color: #0a0a0a;
+    }
+
+    .hero {
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAoAAAAHgCAYAAABie3bnAAAACXBIWXMAABYlAAAWJQFJUiTwAAAgAElEQVR4nOzdeXgcx3nv8U/JgXWNUqQCWRBEFyYyaWgTP+CB3ZJcuL4x0+5JmlbZk1q0rnM7O7Pe9lTOb4ZV6TZU9kxzzS+68J59z0ZnPrS9JDQpAoFAIBQKAQCAUCoFAIBQKAQCAUCgUAgFAoBAIBQKAQCBf41DJyby7kkJlXG2t8gakZxbUs7HeaMX9Xy0z8uw+UpZBddWWVjzNwSx1yP/8sfFlpzwXkz0V5lf5xW+uSzxI6nmPI8K/r3+i2lbWZkfrXiX7/FflONVzKxdZWG6Xv4u7lR3A7Nq2VW2S/t5EbmeqZh+qer8K6Nmkt9eJ94//eJTV0vjvhfdZtdnH3rfxZrR9rqlGffWZv3LzqvKhNsjcCkErn9fA4G9yWjdwIQECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQJEyN+3wU3PySnB5zqv6m0P2qKNZdfOEH5XP8b0J2kHbncSCrgQCBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAjEQLd+Z6Vc8KJUXu57q5CKvWs+SrjJTKfwKZk+Z91fX86unopN3L4xMZ9zH2rPh1XeQ1QoFAIBQKAQCAUCgUAgFAoBAIBQKAQCAUCgUAgFAoBAIBQKCTyHR0TV+OKiH9t4Ujqxq+1rDJVU0uT7+PZ2XWaPb9V7mrqZ1ly9LVmWbFqz/05b3aWnqUTXWTmsqtVDbfs3yU7HcPtV/MqTbo9Hby8U74yuHf+6Xknf3Z9j9xQ2uvZ3JYc+XTmYe6eKa7qlPT2pWNHZOKvKxydJ/l7y72Hc+VfscOXWevvF8q9U82vavxN1a2S0P77WbsHt9/rvzR4KWTuR35qC9nP81etmvtgfTXX0Xlo3PqzvOe+ZCkUs8/Nf7VZV8HyUCXggQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgEApZAsHnLeMX1rH9uLmjpnqqy7UoV6v+qX7+aYubOlwXnz7FQKk8pHtfym0x0nQz5vYrv5tWaHd2klX7I+LrKNPmYX7Hvm6v5oH2r/NX0eP6VbZTrZUT7vo0X06dUfml3EX6xqea/O71Z18ZsMf3VfrxjeZb7fU2b6Zhr/NO9tVG7Wo56X57tuR/Pj5rVXtMybTrbncLzXz/O19x/HxWzU9cR4vdZ+1qer/T28vWZmrW+2ZrUvo6ZP9X63uo+z6aqmJevKTrntk18vMF2vlhknu7/aYbtVX3Z34yf+bbXzq22U1QIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAgAABAnEaHcY5ZP2o5JrMp7K7v9Yr7+/U+hfV5yb+r1RvsRhdZ9WaXSfRxvNnZ6oqvU3u91VrPVejWl82PZrmt+rXqkPqq3bvY6rO81XbevpWvmsPl1xLVuvJvq7X2W5WrV91Nvq7X3bbTzNz5dfUx9br75qu+ovz1+eDX06/NXVvWteqO3aVuXlWcbVaxTfF3qlqK6p4+tSv9eKnquv6Yq/9qr3TVHX3q9vX7ctbyrBQCBQKAQCAUCgUAgFAoBAIBQKAQCAUCgUAgFAoBAIBQKASbQkE4OBQIECBAgAABAgQIECBAgAABAgQIECBAgAABAgQIECBAoH8BswNzZBoD2MoAAAAASUVORK5CYII=');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      position: relative;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.6);
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .overlay h1 {
+      color: #00ffff;
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+
+    .overlay p {
+      color: #aaa;
+      font-size: 1.5rem;
+    }
+
+    footer {
+      background-color: #000;
+      padding: 1rem;
+      text-align: center;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <div class="overlay">
+      <h1>Welcome to the Future</h1>
+      <p>AI & Technology Converge Here</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 AI Tech Universe</p>
+  </footer>
+</body>
+  </html>
