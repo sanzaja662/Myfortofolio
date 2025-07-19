@@ -1,127 +1,147 @@
-<!DOCTYPE html>
-<html lang="id">
+<!DOCTYPE html><html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dunia AI & Teknologi</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Sultan Hasan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      background-color: #0d0d0d;
-      color: #00ffff;
-      font-family: 'Courier New', monospace;
-      padding: 20px;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+      color: #fff;
       margin: 0;
+      padding: 0;
     }
-
-    h1 {
-      font-size: 26px;
+    .marquee {
+      background: #00ffcc;
+      color: #000;
+      font-weight: bold;
+      padding: 0.75rem;
+      text-align: center;
       white-space: nowrap;
       overflow: hidden;
-      border-right: 2px solid #00ffff;
-      animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
-      width: 0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
     }
-
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
+    .marquee span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: marquee 15s linear infinite;
     }
-
-    @keyframes blink {
-      50% { border-color: transparent }
+    @keyframes marquee {
+      0%   { transform: translate(0, 0); }
+      100% { transform: translate(-100%, 0); }
     }
-
-    .text-section {
-      margin-top: 20px;
-      font-size: 16px;
+    .container {
+      max-width: 850px;
+      margin: auto;
+      padding: 2rem;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      margin-bottom: 2rem;
+    }
+    h1, h2 {
+      color: #00ffcc;
+      margin-bottom: 0.5rem;
+    }
+    p, li {
+      font-size: 1rem;
       line-height: 1.7;
-      min-height: 50px;
-      white-space: pre-wrap;
-      overflow: hidden;
-      border-right: 2px solid #00ffff;
     }
-
-    footer {
-      margin-top: 40px;
+    ul {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: #00ffcc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .footer {
       text-align: center;
-      font-size: 13px;
-      color: #888;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 1rem;
+      }
+      .card {
+        padding: 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="marquee"><span>Selamat datang di portofolio Sultan Hasan Al Hakim • Pelajar • Trader Crypto • Web3 Enthusiast • Ayo jelajahi perjalanan digital saya!</span></div>  <div class="container">
+    <div class="card">
+      <h1>Sultan Hasan Al Hakim</h1>
+      <p><strong>Pelajar • Trader Crypto • Web3 Enthusiast</strong></p>
+    </div><div class="card">
+  <h2>Tentang Saya</h2>
+  <p>Saya adalah seorang pelajar SMK yang memiliki minat besar di bidang <strong>teknologi</strong>, <strong>Web3</strong>, dan <strong>trading aset digital</strong>. Saya aktif mengembangkan diri melalui eksplorasi proyek airdrop, riset dunia kripto, dan praktik trading secara konsisten. Saya percaya bahwa masa depan akan dimenangkan oleh mereka yang berani mencoba dan terus belajar.</p>
+</div>
 
-  <h1 id="judul">Mengenal Dunia AI & Teknologi</h1>
+<div class="card">
+  <h2>Tujuan Saya</h2>
+  <p>Membangun <strong>personal branding</strong> sebagai anak muda yang paham teknologi, bermental eksploratif, dan aktif di dunia Web3 serta crypto, sambil terus belajar untuk menjadi ahli di bidang tersebut.</p>
+</div>
 
-  <div class="text-section" id="section1"></div>
-  <div class="text-section" id="section2"></div>
-  <div class="text-section" id="section3"></div>
-  <div class="text-section" id="section4"></div>
-  <div class="text-section" id="section5"></div>
-  <div class="text-section" id="section6"></div>
+<div class="card">
+  <h2>Keahlian Utama</h2>
+  <ul>
+    <li>Trading crypto (swing & scalping)</li>
+    <li>Manajemen risiko sederhana</li>
+    <li>Identifikasi peluang aset kripto</li>
+    <li>Airdrop hunting (berpengalaman)</li>
+    <li>Riset proyek Web3 dan komunitas</li>
+  </ul>
+</div>
 
-  <footer>&copy; 2025 Dunia AI</footer>
+<div class="card">
+  <h2>Tools & Platform</h2>
+  <ul>
+    <li>Telegram (komunitas & airdrop info)</li>
+    <li>TradingView (analisa teknikal)</li>
+    <li>Trust Wallet & wallet lainnya</li>
+    <li>YouTube & Medium (belajar mandiri)</li>
+  </ul>
+</div>
 
-  <script>
-    const texts = [
-      `Apa Itu Kecerdasan Buatan (AI)?
-Kecerdasan Buatan (Artificial Intelligence / AI) adalah cabang ilmu komputer yang berfokus pada pembuatan mesin atau program yang dapat meniru kecerdasan manusia. Ini termasuk kemampuan untuk belajar (machine learning), memahami bahasa (natural language processing), mengenali pola, dan mengambil keputusan secara mandiri.`,
+<div class="card">
+  <h2>Pengalaman / Aktivitas</h2>
+  <ul>
+    <li><strong>Trading Crypto:</strong> aktif melakukan analisa dan entry posisi berdasarkan strategi teknikal</li>
+    <li><strong>Airdrop Hunter:</strong> mengikuti berbagai program airdrop dari proyek Web3</li>
+    <li><strong>Web3 Enthusiast:</strong> mempelajari DeFi, tokenomics, dan ekosistem blockchain</li>
+    <li><strong>DCA Bitcoin:</strong> menabung BTC rutin jangka panjang dengan strategi mingguan</li>
+  </ul>
+</div>
 
-      `Bagaimana AI Bekerja?
-AI bekerja dengan mengolah data besar (big data) dan menggunakan algoritma untuk menemukan pola tersembunyi, membuat prediksi, atau merespons secara otomatis terhadap situasi tertentu. Salah satu cabang AI yang paling populer saat ini adalah machine learning, di mana sistem belajar dari data tanpa diprogram secara eksplisit.`,
+<div class="card">
+  <h2>Pendidikan</h2>
+  <p><strong>SMK (sekarang)</strong><br> Fokus belajar mandiri tentang crypto, teknologi, dan Web3</p>
+</div>
 
-      `Contoh Penggunaan AI dalam Kehidupan Sehari-hari:
-- Asisten virtual seperti Siri dan Google Assistant.
-- Rekomendasi film di Netflix atau lagu di Spotify.
-- Fitur deteksi wajah di kamera HP.
-- Sistem navigasi seperti Google Maps.
-- Filter spam di email dan keamanan siber.
-- Chatbot layanan pelanggan yang aktif 24 jam.`,
+<div class="card">
+  <h2>Kontak</h2>
+  <p>Email: <a href="mailto:sultanhasanalhakim@gmail.com">sultanhasanalhakim@gmail.com</a></p>
+</div>
 
-      `Potensi AI di Masa Depan:
-AI akan menjadi bagian penting dalam hampir semua bidang:
-- Dalam dunia kesehatan, AI bisa membantu mendiagnosis penyakit lebih cepat dari dokter.
-- Di bidang pertanian, AI bisa memantau kondisi tanaman dan tanah secara real-time.
-- Dalam pendidikan, AI bisa menjadi tutor digital yang personal untuk setiap siswa.
-- Dalam transportasi, kendaraan tanpa pengemudi akan semakin umum.`,
+<div class="card">
+  <h2>Visi Saya</h2>
+  <p>Menjadi pelajar yang tidak hanya belajar teori, tetapi juga memiliki <strong>pengalaman nyata</strong> dalam dunia crypto dan teknologi masa depan. Saya percaya dengan konsistensi dan rasa ingin tahu yang tinggi, siapa pun bisa sukses — bahkan dimulai dari usia muda.</p>
+</div>
 
-      `Tantangan dan Risiko AI:
-Meski AI membawa banyak manfaat, ada juga tantangan serius:
-- Hilangnya lapangan kerja karena otomatisasi.
-- Penyalahgunaan AI untuk manipulasi informasi atau pengawasan massal.
-- Bias algoritma yang bisa menghasilkan keputusan yang tidak adil.
-- Kurangnya regulasi dan etika dalam pengembangan AI.`,
+<div class="footer">
+  &copy; 2025 Sultan Hasan Al Hakim. All rights reserved.
+</div>
 
-      `Kenapa Kamu Harus Peduli?
-Karena AI akan mempengaruhi masa depan kamu — mulai dari cara kamu bekerja, belajar, hingga berinteraksi dengan dunia digital. Dengan memahami cara kerja AI, kamu tidak hanya menjadi pengguna pasif, tapi juga bisa jadi pencipta solusi masa depan. Dunia tidak akan menunggu, dan mereka yang siap dengan AI akan lebih unggul dari yang hanya menonton perubahan terjadi.`
-    ];
-
-    const ids = ["section1", "section2", "section3", "section4", "section5", "section6"];
-
-    function typeText(text, elementId, delay = 25) {
-      let i = 0;
-      const el = document.getElementById(elementId);
-      el.textContent = "";
-      const interval = setInterval(() => {
-        el.textContent += text.charAt(i);
-        i++;
-        if (i >= text.length) clearInterval(interval);
-      }, delay);
-    }
-
-    function startTypingAll() {
-      let totalDelay = 3000; // setelah judul selesai
-
-      texts.forEach((text, index) => {
-        setTimeout(() => {
-          typeText(text, ids[index]);
-        }, totalDelay);
-        totalDelay += text.length * 25 + 1000;
-      });
-    }
-
-    window.onload = startTypingAll;
-  </script>
-
+  </div>
 </body>
-</html>
+    </html>
