@@ -14,17 +14,25 @@
     }
 
     body {
-      background-image: url('https://images.unsplash.com/photo-1625231200013-d74c2c7c3b1c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+      background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                        url('https://source.unsplash.com/1600x900/?crypto,technology');
       background-size: cover;
       background-position: center;
       color: white;
       padding: 20px;
+      animation: bgmove 60s ease-in-out infinite alternate;
+    }
+
+    @keyframes bgmove {
+      from { background-position: center; }
+      to { background-position: bottom right; }
     }
 
     .overlay {
-      background-color: rgba(0, 0, 0, 0.7);
+      background-color: rgba(0, 0, 0, 0.6);
       padding: 20px;
       border-radius: 16px;
+      backdrop-filter: blur(5px);
     }
 
     header {
@@ -149,4 +157,4 @@
     </section>
   </div>
 </body>
-      </html>
+  </html>
