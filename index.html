@@ -3,96 +3,150 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portofolio Sultan Hasan</title>
+  <title>Portofolio Sultan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
-      background: url('https://images.unsplash.com/photo-1623052990411-6fd2f2a5a51f?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+      font-family: 'Inter', sans-serif;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-image: url('https://images.unsplash.com/photo-1625231200013-d74c2c7c3b1c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
       background-size: cover;
+      background-position: center;
       color: white;
-    }
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.75);
       padding: 20px;
-      border-radius: 15px;
-      max-width: 850px;
-      margin: 20px auto;
-      box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
     }
-    h1, h2 {
-      color: #00ffff;
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 16px;
     }
-    a {
-      color: #00ffff;
-      text-decoration: none;
+
+    header {
+      text-align: center;
+      margin-bottom: 20px;
     }
-    a:hover {
-      text-decoration: underline;
+
+    h1 {
+      font-size: 28px;
     }
+
+    .marquee {
+      background-color: #00ffd5;
+      color: black;
+      padding: 10px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      border-radius: 8px;
+      overflow: hidden;
+      white-space: nowrap;
+      animation: marquee 10s linear infinite;
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    section {
+      margin-bottom: 25px;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #00ffd5;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
     ul {
       padding-left: 20px;
     }
-    .marquee {
-      width: 100%;
-      overflow: hidden;
-      white-space: nowrap;
-      box-sizing: border-box;
-      animation: marquee 15s linear infinite;
-      color: #00ffff;
-      font-weight: bold;
-      font-size: 18px;
-      background: rgba(0,0,0,0.7);
-      padding: 10px;
-      text-align: center;
+
+    li {
+      margin-bottom: 6px;
     }
-    @keyframes marquee {
-      0%   { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
+
+    .kontak {
+      background-color: #00ffd5;
+      color: black;
+      padding: 10px;
+      border-radius: 10px;
+      display: inline-block;
     }
   </style>
 </head>
 <body>
-  <div class="marquee">Selamat datang di portofolio Sultan Hasan Al Hakim - Pelajar SMK | Trader Crypto | Web3 Enthusiast</div>
   <div class="overlay">
-    <h1>Sultan Hasan Al Hakim</h1>
-    <p><strong>Pelajar • Trader Crypto • Web3 Enthusiast</strong></p>
+    <div class="marquee">📢 Selamat datang di portofolio Sultan Hasan Al Hakim!</div>
 
-    <h2>Tentang Saya</h2>
-    <p>Saya adalah pelajar SMK yang fokus di dunia teknologi, Web3, dan trading crypto. Saya aktif mengeksplorasi proyek-proyek airdrop dan membangun pengalaman praktis dari usia muda.</p>
+    <header>
+      <h1>📁 Portofolio</h1>
+      <p><strong>Sultan Hasan Al Hakim</strong></p>
+      <p>Pelajar • Trader Crypto • Web3 Enthusiast</p>
+    </header>
 
-    <h2>Tujuan</h2>
-    <p>Membangun personal branding sebagai pelajar yang aktif dan profesional di bidang teknologi dan dunia digital terdesentralisasi.</p>
+    <section>
+      <h2>👤 Tentang Saya</h2>
+      <p>Saya adalah seorang pelajar SMK yang memiliki minat besar di bidang teknologi, Web3, dan trading aset digital. Sejak usia dini, saya telah aktif mengembangkan diri melalui eksplorasi proyek-proyek airdrop, riset dunia kripto, serta praktik trading yang konsisten. Saya percaya bahwa masa depan akan dikuasai oleh mereka yang berani mencoba dan terus belajar, terutama di dunia yang terus berkembang seperti teknologi dan keuangan digital.</p>
+    </section>
 
-    <h2>Keahlian</h2>
-    <ul>
-      <li>Trading crypto (swing dan scalping)</li>
-      <li>Airdrop hunting</li>
-      <li>Riset proyek Web3 dan tokenomics</li>
-      <li>Manajemen risiko dasar</li>
-    </ul>
+    <section>
+      <h2>🎯 Tujuan Saya</h2>
+      <p>Membangun personal branding sebagai anak muda yang paham teknologi, bermental eksploratif, dan aktif di dunia Web3 serta crypto, sambil terus belajar untuk menjadi ahli di bidang tersebut.</p>
+    </section>
 
-    <h2>Platform & Tools</h2>
-    <ul>
-      <li>TradingView</li>
-      <li>Telegram</li>
-      <li>Trust Wallet</li>
-      <li>Medium, YouTube</li>
-    </ul>
+    <section>
+      <h2>🧠 Keahlian Utama</h2>
+      <ul>
+        <li>📊 Trading crypto (terutama swing & scalping)</li>
+        <li>📉 Manajemen risiko sederhana</li>
+        <li>🎯 Identifikasi peluang aset kripto</li>
+        <li>🪂 Airdrop hunting (berpengalaman)</li>
+        <li>🧩 Riset proyek Web3 dan komunitas</li>
+      </ul>
+    </section>
 
-    <h2>Aktivitas</h2>
-    <ul>
-      <li>Trading crypto secara aktif</li>
-      <li>Mengikuti banyak program airdrop</li>
-      <li>DCA Bitcoin mingguan</li>
-    </ul>
+    <section>
+      <h2>🔧 Tools & Platform</h2>
+      <ul>
+        <li>Telegram (komunitas crypto dan info airdrop)</li>
+        <li>TradingView (analisa teknikal)</li>
+        <li>Trust Wallet & wallet lainnya</li>
+        <li>YouTube & Medium (untuk belajar mandiri)</li>
+      </ul>
+    </section>
 
-    <h2>Pendidikan</h2>
-    <p>Pelajar SMK</p>
+    <section>
+      <h2>📌 Pengalaman / Aktivitas</h2>
+      <ul>
+        <li>🔁 Trading Crypto: aktif melakukan analisa dan entry posisi berdasarkan strategi teknikal</li>
+        <li>💸 Airdrop Hunter: mengikuti banyak program airdrop dari proyek Web3 terbaru</li>
+        <li>⛓️ Web3 Enthusiast: aktif mempelajari DeFi, tokenomics, dan project blockchain</li>
+        <li>📈 DCA Bitcoin: menabung Bitcoin secara rutin jangka panjang dengan nominal kecil</li>
+      </ul>
+    </section>
 
-    <h2>Kontak</h2>
-    <p>Email: <a href="mailto:sultanhasanalhakim@gmail.com">sultanhasanalhakim@gmail.com</a></p>
+    <section>
+      <h2>🎓 Pendidikan</h2>
+      <p>SMK (sekarang)<br>Jurusan umum<br>Fokus belajar mandiri tentang crypto, teknologi, dan Web3</p>
+    </section>
+
+    <section>
+      <h2>📬 Kontak</h2>
+      <p class="kontak">📧 Email: sultanhasanalhakim@gmail.com</p>
+    </section>
+
+    <section>
+      <h2>🧭 Visi Saya</h2>
+      <p>Menjadi pelajar yang tidak hanya sekadar belajar teori, tetapi juga memiliki pengalaman nyata dalam dunia crypto dan teknologi masa depan. Saya percaya bahwa dengan konsistensi dan rasa ingin tahu yang kuat, siapa pun bisa sukses — termasuk saya, bahkan dimulai dari usia muda.</p>
+    </section>
   </div>
 </body>
-</html>
+      </html>
