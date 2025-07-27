@@ -1,160 +1,104 @@
-<!DOCTYPE html>
-<html lang="id">
+<!DOCTYPE html><html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portofolio Sultan</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <title>Sanz Capital</title>
   <style>
     * {
-      margin: 0;
-      padding: 0;
-      font-family: 'Inter', sans-serif;
-      box-sizing: border-box;
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
     }
-
     body {
-      background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-                        url('https://source.unsplash.com/1600x900/?crypto,technology');
-      background-size: cover;
-      background-position: center;
-      color: white;
-      padding: 20px;
-      animation: bgmove 60s ease-in-out infinite alternate;
+      background: #ffffff;
+      color: #111;
+      line-height: 1.6;
     }
-
-    @keyframes bgmove {
-      from { background-position: center; }
-      to { background-position: bottom right; }
-    }
-
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 20px;
-      border-radius: 16px;
-      backdrop-filter: blur(5px);
-    }
-
     header {
+      background: #000;
+      color: #fff;
+      padding: 3rem 1rem;
       text-align: center;
-      margin-bottom: 20px;
     }
-
-    h1 {
-      font-size: 28px;
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
     }
-
-    .marquee {
-      background-color: #00ffd5;
-      color: black;
-      padding: 10px;
-      margin-bottom: 20px;
-      font-weight: bold;
-      border-radius: 8px;
-      overflow: hidden;
-      white-space: nowrap;
-      animation: marquee 10s linear infinite;
+    header p {
+      font-size: 1.2rem;
     }
-
-    @keyframes marquee {
-      0% { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
-    }
-
     section {
-      margin-bottom: 25px;
+      padding: 3rem 1rem;
+      max-width: 800px;
+      margin: auto;
     }
-
-    h2 {
-      font-size: 20px;
-      margin-bottom: 10px;
-      border-bottom: 2px solid #00ffd5;
+    .features {
+      display: grid;
+      gap: 1.5rem;
+    }
+    .feature {
+      padding: 1.5rem;
+      background: #f5f5f5;
+      border-radius: 12px;
+    }
+    .feature h3 {
+      margin-bottom: 0.5rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #000;
+      color: #fff;
+    }
+    a.button {
       display: inline-block;
-      padding-bottom: 5px;
+      padding: 0.75rem 1.5rem;
+      background: #007aff;
+      color: white;
+      border-radius: 8px;
+      margin-top: 1rem;
+      text-decoration: none;
+      transition: background 0.3s;
     }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    li {
-      margin-bottom: 6px;
-    }
-
-    .kontak {
-      background-color: #00ffd5;
-      color: black;
-      padding: 10px;
-      border-radius: 10px;
-      display: inline-block;
+    a.button:hover {
+      background: #005ecb;
     }
   </style>
 </head>
 <body>
-  <div class="overlay">
-    <div class="marquee">📢 Selamat datang di portofolio Sultan Hasan Al Hakim!</div>
-
-    <header>
-      <h1>📁 Portofolio</h1>
-      <p><strong>Sultan Hasan Al Hakim</strong></p>
-      <p>Pelajar • Trader Crypto • Web3 Enthusiast</p>
-    </header>
-
-    <section>
-      <h2>👤 Tentang Saya</h2>
-      <p>Saya adalah seorang pelajar SMK yang memiliki minat besar di bidang teknologi, Web3, dan trading aset digital. Sejak usia dini, saya telah aktif mengembangkan diri melalui eksplorasi proyek-proyek airdrop, riset dunia kripto, serta praktik trading yang konsisten. Saya percaya bahwa masa depan akan dikuasai oleh mereka yang berani mencoba dan terus belajar, terutama di dunia yang terus berkembang seperti teknologi dan keuangan digital.</p>
-    </section>
-
-    <section>
-      <h2>🎯 Tujuan Saya</h2>
-      <p>Membangun personal branding sebagai anak muda yang paham teknologi, bermental eksploratif, dan aktif di dunia Web3 serta crypto, sambil terus belajar untuk menjadi ahli di bidang tersebut.</p>
-    </section>
-
-    <section>
-      <h2>🧠 Keahlian Utama</h2>
-      <ul>
-        <li>📊 Trading crypto (terutama swing & scalping)</li>
-        <li>📉 Manajemen risiko sederhana</li>
-        <li>🎯 Identifikasi peluang aset kripto</li>
-        <li>🪂 Airdrop hunting (berpengalaman)</li>
-        <li>🧩 Riset proyek Web3 dan komunitas</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>🔧 Tools & Platform</h2>
-      <ul>
-        <li>Telegram (komunitas crypto dan info airdrop)</li>
-        <li>TradingView (analisa teknikal)</li>
-        <li>Trust Wallet & wallet lainnya</li>
-        <li>YouTube & Medium (untuk belajar mandiri)</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>📌 Pengalaman / Aktivitas</h2>
-      <ul>
-        <li>🔁 Trading Crypto: aktif melakukan analisa dan entry posisi berdasarkan strategi teknikal</li>
-        <li>💸 Airdrop Hunter: mengikuti banyak program airdrop dari proyek Web3 terbaru</li>
-        <li>⛓️ Web3 Enthusiast: aktif mempelajari DeFi, tokenomics, dan project blockchain</li>
-        <li>📈 DCA Bitcoin: menabung Bitcoin secara rutin jangka panjang dengan nominal kecil</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>🎓 Pendidikan</h2>
-      <p>SMK (sekarang)<br>Jurusan umum<br>Fokus belajar mandiri tentang crypto, teknologi, dan Web3</p>
-    </section>
-
-    <section>
-      <h2>📬 Kontak</h2>
-      <p class="kontak">📧 Email: sultanhasanalhakim@gmail.com</p>
-    </section>
-
-    <section>
-      <h2>🧭 Visi Saya</h2>
-      <p>Menjadi pelajar yang tidak hanya sekadar belajar teori, tetapi juga memiliki pengalaman nyata dalam dunia crypto dan teknologi masa depan. Saya percaya bahwa dengan konsistensi dan rasa ingin tahu yang kuat, siapa pun bisa sukses — termasuk saya, bahkan dimulai dari usia muda.</p>
-    </section>
-  </div>
+  <header>
+    <h1>Sanz Capital</h1>
+    <p>Edukasi Crypto yang Relevan dan Berbasis Komunitas</p>
+    <a href="#kontak" class="button">Gabung Komunitas</a>
+  </header>  <section>
+    <h2>Tentang Kami</h2>
+    <p>Sanz Capital adalah platform edukasi crypto yang berfokus pada pemahaman mendalam, akses komunitas, dan panduan terpercaya untuk pemula hingga tingkat lanjut.</p>
+  </section>  <section>
+    <h2>Layanan Kami</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>Kursus Gratis</h3>
+        <p>Kursus online untuk memahami blockchain, crypto, dan DeFi dari dasar.</p>
+      </div>
+      <div class="feature">
+        <h3>Panduan Pemula</h3>
+        <p>Langkah-langkah praktis untuk mulai berinvestasi dan memahami risiko di crypto.</p>
+      </div>
+      <div class="feature">
+        <h3>Update Harian</h3>
+        <p>Info market harian, sentimen, dan peluang crypto terbaru.</p>
+      </div>
+      <div class="feature">
+        <h3>Komunitas Telegram</h3>
+        <p>Tempat diskusi, belajar bersama, dan berbagi peluang airdrop.</p>
+      </div>
+    </div>
+  </section>  <section id="kontak">
+    <h2>Kontak Kami</h2>
+    <p>Email: sanzcapital@email.com</p>
+    <p>Telegram: @sanzcapital</p>
+    <p>Instagram: @sanzcapital.id</p>
+  </section>  <footer>
+    <p>&copy; 2025 Sanz Capital. All rights reserved.</p>
+  </footer>
 </body>
-  </html>
+</html>
